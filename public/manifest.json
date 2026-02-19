@@ -1,7 +1,7 @@
 {
-    "name": "Food Analysis Pro",
-    "short_name": "FoodAnalysis",
-    "description": "Professional AI-powered food nutrition analysis with advanced intelligence.",
+    "name": "NutriScan AI Professional",
+    "short_name": "NutriScan",
+    "description": "AI-powered food nutrition analysis and health tracking.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#050505",
@@ -9,9 +9,19 @@
     "icons": [
         {
             "src": "/vite.svg",
-            "sizes": "192x192 512x512",
+            "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "any maskable"
+        },
+        {
+            "src": "/vite.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/vite.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
         }
     ],
     "orientation": "portrait"
