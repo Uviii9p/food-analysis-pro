@@ -30,15 +30,32 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between h-20 md:h-24">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-4 group">
+                    <Link to="/" className="flex items-center gap-3 group">
                         <motion.div
-                            className="flex flex-col"
-                            whileHover={jellyHover}
+                            className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+                            whileHover={{ ...jellyHover, rotate: 5 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            <h1 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none">NutriScan</h1>
-                            <span className="text-[10px] text-slate-400 font-black tracking-[0.4em] uppercase mt-1">Professional</span>
+                            {/* SVG Logo - Custom crafted to look like the user's logo */}
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="14" cy="14" r="8" stroke="currentColor" strokeWidth="2.5" className="text-blue-400" />
+                                <line x1="20" y1="20" x2="28" y2="28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="text-blue-400" />
+                                <path d="M11 14C11 12.5 12.5 11 14 11" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                                <circle cx="14" cy="14" r="4" fill="url(#strawberry)" />
+                                <defs>
+                                    <linearGradient id="strawberry" x1="14" y1="10" x2="14" y2="18" gradientUnits="userSpaceOnUse">
+                                        <stop stopColor="#ef4444" />
+                                        <stop offset="1" stopColor="#991b1b" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            {/* Circuit glow effect */}
+                            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_15px_rgba(34,211,238,0.4)]" />
                         </motion.div>
+                        <div className="flex flex-col">
+                            <h1 className="text-xl font-black text-white tracking-tighter uppercase leading-none">Food Analysis Pro</h1>
+                            <span className="text-[10px] text-blue-400 font-bold tracking-[0.3em] uppercase mt-0.5">Advanced AI Intelligence</span>
+                        </div>
                     </Link>
 
                     {/* Desktop Nav */}
